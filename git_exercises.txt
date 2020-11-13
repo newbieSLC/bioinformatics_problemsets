@@ -1,3 +1,6 @@
-i:
-I am trying this again
-I am trying this again
+i
+hello this is my file using vi text editor which I will push to github
+:w
+:q
+
+

@@ -1,0 +1,2 @@
+
+hello this is my first vi file. I am inserting the this text in the insert mode
