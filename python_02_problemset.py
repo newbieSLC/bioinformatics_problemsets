@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+import sys
 
 #always remember to include the above on the first line to make it executable by python3
 #if there are any modules to import, this would be the correct place to add import
-#this assignment I don't have anything to import
+#this assignment I will use sys.argv so I will import sys
 
 #Python Problemset 2
 
@@ -36,7 +37,7 @@ else:
 #try another if/else
 #this time the statement will be false
 
-humanCHMP3="MGLFGKTQEKPPKELVNEWSLKIRKEMRVVDRQIRDIQREEEKVKRSVKDAAKKGQKDVCIVLAKEMIRSRKAVSKLYASKAHMNSVLMGMKNQLAVLRVAGSLQKSTEVMKAMQSLVKIPEIQATMRELSKEMMKAGIIEEMLEDTFESMDDQEEMEEEAEMEIDRILFEITAGALGKAPSKVTDALPEPEPPGAMAASEDEEEEEEALEAMQSRLATLRS"
+humanCHMP3="MGLFGKTQEKPPKELVNEWSLKIRKQREEIPEIQATMRELSKEMMKAGIIEEMLEDSRLATLRS"
 print ("Human CHMP3 sequence is ", humanCHMP3)
 
 if "MGLLV" in humanCHMP3:
@@ -72,9 +73,21 @@ elif count/3:
 else:
   print ("count is between 50 and 60")
 
-
- 
-
+#now I'll attempt to use sys.argv so I can change the input variable on the command line
+#REMEMBER TO GIVE THE NUMBER VALUE OF THE VARIABLE OR THE SCRIPT CANNOT RUN!!
+print("Now I will run this using sys.argv") 
+number=int(sys.argv[1])
+print("my next variable is ", number)
+if number <50:
+  print("count is less than 50")
+elif number >60:
+  print ("count is greater than 60")
+elif number <0:
+  print ("count is a negative number")
+elif number/3:
+  print ("count is divisible by 3")
+else:
+  print ("count is between 50 and 60")
    
 
 
