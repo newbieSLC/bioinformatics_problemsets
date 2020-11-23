@@ -47,9 +47,31 @@ else:
   
 
 
+#test to see if a number is positive or negative
+#print positive if pos, or print negative if neg
+print("Is my variable positive or negative?")
+
+if my_variable >0:
+  print ("my variable is positive")
+elif my_variable==0:
+  print ("my variable equals zero")
+elif my_variable <0:
+  print ("my variable is negative")
 
 
+count=57
+print ("my next variable is ", count)
+if count <50:
+  print("count is less than 50")
+elif count >60:
+  print ("count is greater than 60")
+elif count <0:
+  print ("count is a negative number")
+else:
+  print ("count is between 50 and 60")
 
+
+ 
 
    
 
