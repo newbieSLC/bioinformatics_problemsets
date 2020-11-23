@@ -67,6 +67,8 @@ elif count >60:
   print ("count is greater than 60")
 elif count <0:
   print ("count is a negative number")
+elif count/3:
+  print ("count is divisible by 3")
 else:
   print ("count is between 50 and 60")
 
