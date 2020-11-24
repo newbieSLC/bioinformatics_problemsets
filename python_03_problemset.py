@@ -69,4 +69,9 @@ dna4C=dna4G.replace('c','C')
 
 print("First, I replaced all the lowercase with uppercase letters ", dna4C)
 
+print("Now I'll replace all the T with U")
+
+finalRNAseq=dna4C.replace ('T', 'U')
+print(finalRNAseq)
+
 
