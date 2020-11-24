@@ -115,9 +115,22 @@ NTextract7G=NTextract7.count('G')
 NTextract7sum=NTextract7g+NTextract7G
 print('The number of G in substring irregardless of case is ', NTextract7sum)
 
+#Use NT sequence and reverse compliment it
+#HEre is the sequence
+
+print('Here is the DNA sequence', NTextract7)
+#Now reverse the sequence
+
+reverse=NTextract7[:: -1]
+print('This is the reverse sequence ', reverse)
+
+#Now replace bases to make the reverse compliment
+reverselower=reverse.lower()
+
+reverseA=reverselower.replace('a', 'T')
+reverseT=reverseA.replace('t', 'A')
+reverseG=reverseT.replace('g','C')
+reverseC=reverseG.replace('c','G')
+print('This is the final reverse compliment sequence ', reverseC)
 
 
-
-
-
- 
