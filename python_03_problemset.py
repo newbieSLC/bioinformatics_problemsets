@@ -133,4 +133,38 @@ reverseG=reverseT.replace('g','C')
 reverseC=reverseG.replace('c','G')
 print('This is the final reverse compliment sequence ', reverseC)
 
+#Write a script to find the starting nucleotide position of an EcoRI site in the below DNA sequence
+
+dna8='GATGGGATTGGGGTTTTCCCCTCCCATGTGCTCAAGACTGGCGCTAAAAGTTTTGAGCTTCTCAAAAGTCTAGAGCCACCGTCCAGGGAGCAGGTAGCTGCTGGGCTCCGGGGACACTTTGCGTTCGGGCTGGGAGCGTGCTTTCCACGACGGTGACACGCTTCCCTGGATTGGCAGCCAGACTGCCTTCCGGGTCACTGCCATGGAGGAGCCGCAGTCAGATCCTAGCGTCGAGCCCCCTCTGAGTCAGGAAACATTTTCAGACCTATGGAAACTACTTCCTGAAAACAACGTTCTGTCCCCCTTGCCGTCCCAAGCAATGGATGATTTGATGCTGTCCCCGGACGATATTGAACAATGGTTCACTGAAGACCCAGGTCCAGATGAAGCTCCCAGAATTCGCCAGAGGCTGCTCCCCCCGTGGCCCCTGCACCAGCAGCTCCTACACCGGCGGCCCCTGCACCAGCCCCCTCCTGGCCCCTGTCATCTTCTGTCCCTTCCCAGAAAACCTACCAGGGCAGCTACGGTTTCCGTCTGGGCTTCTTGCATTCTGGGACAGCCAAGTCTGTGACTTGCACGTACTCCCCTGCCCTCAACAAGATGTTTTGCCAACTGGCCAAGACCTGCCCTGTGCAGCTGTGGGTTGATTCCACACCCCCGCCCGGCACCCGCGTCCGCGCCATGGCCATCTACAAGCAGTCACAGCACATGACGGAGGTTGTGAGGCGCTGCCCCCACCATGAGCGCTGCTCAGATAGCGATGGTCTGGCCCCTCCTCAGCATCTTATCCGAGTGGAAGGAAATTTGCGTGTGGAGTATTTGGATGACAGAAACACTTTTCG'
+
+#Because of the strange way python counts, I think I need to add +1 to the answer to get the correct position
+
+eco=dna8.find('GAATTC')+1
+print("The EcoR1 site begins at position ", eco)
+
+#Also find the end postion of the EcoR1 site. Again, the strange way python counts messes me up. 
+#If the start site is 396, I need to add 6 since EcoR1 site is 6 NT long. Then, add an extra +1 since python doesn't print the last character
+
+ecoend=eco+7
+print("The EcoR1 site ends at position ", ecoend)
+
+#Use[string formating](https://github.com/prog4biol/pfb2019/blob/master/README.md#string-formatting) to print out these two values like this:
+#EcoRI startPos:yourStartPos endPos:yourEndPos
+
+string="The EcoR1 site starts at position {} and ends at position {}"
+newstring=string.format(eco, ecoend)
+print(newstring)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
