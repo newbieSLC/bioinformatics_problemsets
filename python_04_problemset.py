@@ -1,8 +1,8 @@
-i#!/usr/bin/env python3
+#!/usr/bin/env python3
+import sys
 
 # above makes it executable
-# any imports should go next
-# no imports on this script
+# any imports go next
 
 #this script is for practicing Python lists and loops
 
@@ -77,11 +77,76 @@ print("This is now a list " + str(species))
 print(species[1])
 
 #sort the list alphabetically
-speciessort=sorted(species["erectus", "neanderthalensis", "sapiens"])
-print(speciessort)
+species_split= sorted(species)
+print("Now I will sort the list alphabetically")
+print(species_split)
+#sort the list by length of each string and print, shortest string first
+print("Now I'll sort the list by shortest length first")
+print(sorted(species_split, key=len))
+
+
+#Write a script that uses a while loop to calculate the factorial of 1000
+x = 1
+factorial = 1
+while x < 1000:
+	x += 1
+	factorial *= x 
+print(factorial)
+
+#Iterate through each element of this list using a for loop: [101,2,15,22,95,33,2,27,72,15,52]
+
+elements=[101,2,15,22,95,33,2,27,72,15,52]
+for element in iter( elements):
+  if element%2==0:
+    print(element)
 
 
 
+elements= [101,2,15,22,95,33,2,27,72,15,52]
+#Sort the elements of the above list
+elements_sorted=sorted(elements)
+print("Here are the elements sorted")
+print(elements_sorted)
+
+#Calculate two cumulative sums, one of all the even values - and one of all the odd values
+#Print only the final two sums
+
+even_sum=0
+odd_sum=0
+
+for element in elements_sorted:
+  print(element)
+  if element%2 == 0:
+    even_sum += element
+  else:
+    odd_sum += element
+
+print("Sum of even numbers is " + str(even_sum))
+print("Sum of odd numbers is " + str(odd_sum))
+
+ 
+#Write a script that uses range() in a for loop to print out every number between 0 and 99
+#Remember the strange way python counts and prints numbers
+
+for item in range(0,100):
+  print(item)
+
+#Modify your loop to print out every number between 1 and 100
+
+for item in range(0,101):
+  print(item)
+
+#Create a new script that uses list comprehension to print out every number between 1 and 100
+print("Now print out the same using list comprehension")
+[print(item) for item in range(0,101)]
+
+#Write a new script that takes the start and end values from the command line
+print("Give the script start and end values from the command line")
+start=int(sys.argv[1])
+end=int(sys.argv[2])+1
+[print (item) for item in range(start,end)]
+
+print("Give the script start and end values from the command line")
 
 #my first loop
 
