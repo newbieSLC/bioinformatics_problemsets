@@ -52,12 +52,11 @@ diane_list.remove("Paul")
 print("I have removed Paul from the list")
 print(diane_list)
 
-#use join to create a string from your list)
+#use join to create a string from a list
 #define a separator
 separator=(', ')
 print(separator.join(diane_list))
 print('In the above list notice how I used the join method to create a string from my list')
-
 #splitting a string to make a loop
 #split take a single argument, called delimiter, and splits the original string wherever it sees the delimiter
 #and in doing so produces a list
@@ -94,6 +93,15 @@ while x < 1000:
 print(factorial)
 
 #Iterate through each element of this list using a for loop: [101,2,15,22,95,33,2,27,72,15,52]
+#Print out only the values that are even
+
+
+elements=[101,2,15,22,95,33,2,27,72,15,52]
+
+for element in iter(elements):
+  if element%2==0:
+   print(element)
+
 
 elements=[101,2,15,22,95,33,2,27,72,15,52]
 for element in iter( elements):
@@ -148,13 +156,37 @@ end=int(sys.argv[2])+1
 
 print("Give the script start and end values from the command line")
 
+
+
+
+#Write a new script to create a list with the following data
+#this is a tuple so convert a tuple to a list 
+sequences=['ATGCCCGGCCCGGC','GCGTGCTAGCAATACGATAAACCGG','ATATATATCGAT','ATGGGCCC']
+
+
+#Use a for loop to iterate through each element of this list, print out the length, separated by a tab, then the sequence
+
+for seq in sequences:
+  length=len(seq)
+  print(str(length)+seq)
+
+
+
+
+
+
+
+
+
 #my first loop
 
 for name in diane_list:
   print(name + " is a family member")
   name_length=len(name)
   print(name + " is a family member whose name has " +  str(name_length) + " letters")
-
+  if "A" in name:
+    print("There is a letter A in the name " + name)
+   
 #iterate over a single word
 
 name=("python")
