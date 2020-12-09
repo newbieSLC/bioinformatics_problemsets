@@ -38,4 +38,21 @@ else:
 print("End of script.\n")
 
 
+start=int(sys.argv[6])
+end=int(sys.argv[7])+1
+
+for item in range(start,end):
+  print(item)
+
+#now only print numbers that are even numbers and range is 1-100
+
+for item in range(start,end):
+  if item%2==0:
+    print(item, ' is divisible by 2')
+  elif item%3==0:
+    print(item, ' is divisible by 3')
+  else:
+    print(item, 'is not divisble by 2 or 3')
+
+
 
