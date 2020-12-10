@@ -33,10 +33,64 @@ fav_thing=sys.argv[1]
 print(sys.argv[1])
 
 
-
 #Maybe you want to print out all the keys to the user so that they know what to pick from
 
 name=input('Type "keys" and discover all the exciting keys in my dictionary named favs!!!  ')
 for fav in favs:
   print(fav)
+
+
+#Change the value of your favorite organism
+
+favs['organism']='sasquatch'
+
+fav_thing=sys.argv[2]
+print(sys.argv[2])
+
+#Use a for loop to print out each key and value of the dictionary
+for fav in favs:
+  item=favs[fav]
+  print(fav,':', item)
+
+
+#Make a set using the two different syntaxes for creating a set myset = set() and myset2 = {}
+# What is the difference?
+# Does it matter how you make it?
+
+mySet = set('ATGTGGG')
+mySet2 = {'ATGCCT'}
+
+#To create an empty set you have to use set(), not {} the latter creates an empty dictionary
+#So in the above example there is no difference
+#But if we first created an empty set and wnanted to add to it, we must use set()
+
+#Write a script to find the intersection, difference, union, and symetrical difference between these two sets
+
+SetA ={'3','14','15','9','26','5','35','9'}
+SetB ={'60','22','14','0','9'}
+
+print('SetA: ', SetA, '\nSetB: ', SetB)
+set_difference=SetA-SetB
+print('The difference between SetA and SetB is ', set_difference)
+
+set_intersection=SetA&SetB
+print('The intersection of SetA and SetB is ', set_intersection)
+
+set_union=SetA|SetB
+print("The union of SetA and SetB is ", set_union)
+
+set_symmetric=SetA^SetB
+print('The symmetric difference between SetA and SetB is ', set_symmetric)
+
+
+
+
+
+
+
+
+
+
+
+
 
