@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import sys
 
 #Write a script in which you construct a dictionary of your favorite things
 favs={}
@@ -27,6 +27,16 @@ favs['organism']='dog'
 fav_thing=favs['organism']
 print(fav_thing)
 
+#Take a value from the command line for fav_thing and print the value of that item from the dictionary
+
+fav_thing=sys.argv[1]
+print(sys.argv[1])
 
 
+
+#Maybe you want to print out all the keys to the user so that they know what to pick from
+
+name=input('Type "keys" and discover all the exciting keys in my dictionary named favs!!!  ')
+for fav in favs:
+  print(fav)
 
