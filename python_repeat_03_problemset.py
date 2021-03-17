@@ -90,6 +90,20 @@ EcoRI_end = DNAupper.find(EcoRI) + len(EcoRI)
 print("EcoRI runs from nucleotide position", EcoRI_start, "to", EcoRI_end)
 
 
+#practice using format() method
+print('EcoR1 start pos:{} stop position:{}'.format(EcoRI_start, EcoRI_end))
 
+
+
+string='This sequence: {} is {} bp long and has the name {}' 
+print(string)
+
+dna='ATGGCCC'
+length=len(dna)
+name='EcoR1'
+
+
+new_string=string.format(dna,length,name)
+print(new_string)
 
 
